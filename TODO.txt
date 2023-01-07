@@ -1,0 +1,38 @@
+Multiple lines won't work cuz reasons
+so timbre doesn't really have to be messed with
+
+Consider yoloX for object detection if its better
+
+Details of midas transforms in here: https://github.com/isl-org/MiDaS/blob/master/run.py
+
+For me to do:
+
+Range filtering
+    - Use the output of this while filtering objects.
+    - Slider mechanism not too shabby ig.
+
+Generate audio for an image. Make a function for this that can be used later in video.
+    - use prime numbered frequencies to avoid harmonics or timbre 
+    - https://zach.se/generate-audio-with-python/
+stuff. learn about that.
+
+Make workflow for video
+    - everything 60th (fps-th) frame so audio has same length as video
+    - dmap, range filtering, object detec, filter objects on range filtered dmap
+    - generate audio for each output
+
+Outputs can be generated on youtube vids of stage plays to show relevance of range filtering.
+
+2 points about performance:
+    - dmap can be retrieved from audio using fourier analysis to show not much information is lost
+    - show output of same image with different lighting, then do some similarity
+        -> https://stackoverflow.com/questions/3172911/compare-two-audio-files
+        -> voice output: day vs night similarity will be low
+        -> our output: day vs night will be high
+
+Correlation possibilities
+    - Pearson coefficient - https://www.researchgate.net/post/How-to-compare-shape-similarity-of-two-curves
+    - some stuff here - https://www.researchgate.net/post/How_can_I_compare_the_shape_of_two_curves
+        - 7th answer looks kinda nice ngl
+    - cosine similarity of every column
+    - some way to find signature or shape of signal
